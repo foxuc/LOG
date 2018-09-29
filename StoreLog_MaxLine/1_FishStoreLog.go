@@ -112,10 +112,8 @@ func ReadFileToLastLine(fileName string) (string)  {
 		}
 		if err != nil {
 			if err == io.EOF {
-
-				LastLine= string(arr[len1-1]);
-				str := "【MaxLine:"+ strconv.Itoa (len1-1)+ "】," +LastLine
-				return str
+				LastLine ="【MaxLine:"+ strconv.Itoa (len1-1)+ "】," + string(arr[len1-1])
+				return LastLine
 			}
 		}
 	}
